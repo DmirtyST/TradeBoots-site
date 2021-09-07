@@ -1,4 +1,4 @@
-@import "../../node_modules/swiper/swiper-bundle.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
 
 *,
 *::before,
@@ -76,6 +76,7 @@ select {
   src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaRegular.woff") format("woff"), url("../fonts/ProximaNovaRegular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
+  font-display: fallback;
 }
 
 @font-face {
@@ -84,6 +85,7 @@ select {
   src: url("../fonts/ProximaNovaBold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNovaBold.woff") format("woff"), url("../fonts/ProximaNovaBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 700;
+  font-display: fallback;
 }
 
 body {
@@ -155,6 +157,10 @@ body {
   position: absolute;
   top: 65%;
   left: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-transform: translate(-50%, -60%);
       -ms-transform: translate(-50%, -60%);
           transform: translate(-50%, -60%);
